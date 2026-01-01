@@ -1,0 +1,43 @@
+{
+  "name": "monomarkdown",
+  "displayName": "Mono Markdown",
+  "publisher": "lukelopez",
+  "description": "Preview Markdown files in-place by hiding formatting characters.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukelopez/monomarkdown"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Monomarkdown",
+      "properties": {
+        "monomarkdown.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable in-place markdown previewing."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.1.3"
+  }
+}
